@@ -6,13 +6,18 @@
 <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
-
-	<h1 th:text="${title}"></h1>
+	<header>
+		<h1 th:text="${title}"></h1>
+	</header>
+	
 	<div th:object="${form}">
 		<form method="get" action="#" th:action="@{/confirm}" id="form">
-			<input type="text" name="name" placeholder="名前"/> 
-			<input type="text" name="comment" placeholder="こんにちは"/>
-			<input type="submit" value="送信" />
+			
+			<div>
+				<input type="text" name="name" placeholder="名前"/> 
+				<input type="text" name="comment" placeholder="こんにちは"/>
+				<input type="submit" value="送信" />
+			</div>
 	
 			<p>
 				<span class="errorMessage" th:if="${#fields.hasErrors('name')}"
@@ -21,7 +26,6 @@
 				<span class="errorMessage" th:if="${#fields.hasErrors('comment')}"
 					th:errors="*{comment}">エラー</span>
 			</p>
-			
 		</form>
 	</div>
 

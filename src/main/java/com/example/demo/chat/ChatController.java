@@ -58,12 +58,7 @@ public class ChatController {
 		entform.setName(form.getName());
 		entform.setComment(form.getComment());
 		
-		
 		sampledao.insertDb(entform);
-		
-//		complete
-	
-
 		
 //		return "form/confirm";
 		return "redirect:/chat";

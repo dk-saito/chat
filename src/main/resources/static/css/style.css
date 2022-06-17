@@ -1,21 +1,47 @@
 @charset "UTF-8";
 
 * {
-	font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
- 
+	font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif; 
+}
+
+header {
+	background-color: #192D4C;
+	
 }
 
 body {
 	margin: 0 auto;
-	background-color: skyblue;
+	background-color: #859ED6;
 }
 
 h1 {
 	text-align: center;
+	color: white;
+	font-weight: normal;
+	margin-top: 0;
+	padding: 10px 0;
+	vertical-align: middle;
 }
 
 #form {
 	text-align: center;
+	width: 100vw;
+	position: fixed;
+	top: 810px;
+
+	padding: 20px auto;
+}
+
+#form p {
+	margin: 0;
+}
+
+#form div {
+	
+}
+
+#form div input {
+	padding: 4px 12px;
 }
 
 #talk {
@@ -31,6 +57,7 @@ h1 {
 
 #talk tr td:nth-child(odd) {
 	padding: 0px 14px;
+	color: white;
 }
 
 .errorMessage {

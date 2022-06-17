@@ -4,32 +4,48 @@
 	font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif; 
 }
 
+html {
+	
+}
+
 header {
 	background-color: #192D4C;
+	
+	width: 500px;
+	position: fixed;
+	top: 0;
 	
 }
 
 body {
+	width: 500px;
 	margin: 0 auto;
 	background-color: #859ED6;
 }
 
 h1 {
-	text-align: center;
+	font-size: 26px;
 	color: white;
 	font-weight: normal;
-	margin-top: 0;
-	padding: 10px 0;
+	margin: 0;
+	padding: 10px 0 10px 30px;
 	vertical-align: middle;
 }
 
 #form {
 	text-align: center;
-	width: 100vw;
+	width: 500px;
+	
+	/*
 	position: fixed;
 	top: 810px;
-
-	padding: 20px auto;
+	*/
+	
+	position: fixed;
+	bottom: 0;
+	
+	padding: 6px 0;
+	background-color: #C0C0C0;
 }
 
 #form p {
@@ -41,9 +57,51 @@ h1 {
 }
 
 #form div input {
-	padding: 4px 12px;
+	padding: 4px 10px;
 }
 
+#form #name {
+	width: 60px;
+}
+
+#form #comment {
+	width: 300px;
+}
+
+#talk {
+	
+}
+
+#talk p {
+	margin-left: 26px;
+}
+
+#talk img {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+}
+
+#talk span:nth-child(2) {
+	color: white;
+}
+
+#talk span:nth-child(4) {
+	background-color: white;
+	padding: 4px 10px;
+	border-radius: 16px;
+	margin-left: 30px;
+}
+
+#talkName {
+	font-size: 12px;
+}
+
+#talkComment {
+	
+}
+
+/* 
 #talk {
 	margin: 20px auto;
 	border-width: 4px;
@@ -60,7 +118,11 @@ h1 {
 	color: white;
 }
 
+ */
+
 .errorMessage {
 	color: red;
 }
+
+
 

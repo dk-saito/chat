@@ -10,13 +10,17 @@
 		<h1 th:text="${title}"></h1>
 	</header>
 	
+	<br />
+	<br />
+	<br />
+	
 	<div th:object="${form}">
 		<form method="get" action="#" th:action="@{/confirm}" id="form">
 			
 			<div>
-				<input type="text" name="name" placeholder="名前"/> 
-				<input type="text" name="comment" placeholder="こんにちは"/>
-				<input type="submit" value="送信" />
+				<input type="text" name="name" placeholder="名前" id="name"/> 
+				<input type="text" name="comment" placeholder="こんにちは" id="comment"/>
+				<input type="submit" value="送信" id="submit"/>
 			</div>
 	
 			<p>
@@ -29,7 +33,19 @@
 		</form>
 	</div>
 
-	<div>
+	<div id="talk">
+		<div th:each="res:${dbList}">
+			<p>
+				<img th:src=${imgPath} alt="" />
+				<span th:text="${res.name}" id="talkName"></span>
+				<br />
+				
+				<span th:text="${res.comment}" id="talkComment"></span>
+				
+			</p>
+		</div>
+		
+	<!-- 
 		<table id="talk">
 			<tr th:each="res:${dbList}">
 			 
@@ -40,7 +56,12 @@
 			
 
 		</table>
+	 -->
 	</div>
+	
+	<br />
+	<br />
+	<br />
 
 </body>
 </html>

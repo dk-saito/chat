@@ -37,6 +37,30 @@ private final JdbcTemplate db;
 			entformdb.setComment((String)result1.get("comment"));
 			resultDb2.add(entformdb);
 		}
+		
 		return resultDb2;
 	}
+	
+//	public String img() {
+////		画像処理
+//		String imgPath = "";
+//		switch(form.getName()) {
+//			case "taro":
+//			imgPath = "/img/boy.jpg";
+//			
+//			case "jiro":
+//			imgPath = "/img/boy2.jpg";
+//			
+//			case "saburo":
+//			imgPath = "/img/boy3.jpg";
+//			
+//			case "hanako":
+//			imgPath = "/img/girl2.jpg";
+//		}
+//		
+//		return imgPath;
+//		
+//	}
+	
+	
 }

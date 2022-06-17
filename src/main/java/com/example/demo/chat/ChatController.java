@@ -36,23 +36,7 @@ public class ChatController {
 		List<EntForm> list = sampledao.searchDb();
 		model.addAttribute("dbList", list);
 		
-//		画像処理
-		String imgPath = "";
-		switch(form.getName()) {
-			case "taro":
-			imgPath = "/img/boy.jpg";
-			
-			case "jiro":
-			imgPath = "/img/boy2.jpg";
-			
-			case "saburo":
-			imgPath = "/img/boy3.jpg";
-			
-			case "hanako":
-			imgPath = "/img/girl2.jpg";
-		}
-		
-		model.addAttribute("imgPath", imgPath);
+//		model.addAttribute("imgPath", imgPath);
 		
 		return "form/chat";
 	}

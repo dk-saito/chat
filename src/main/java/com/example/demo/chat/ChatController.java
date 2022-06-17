@@ -30,8 +30,9 @@ public class ChatController {
 	
 	@RequestMapping("/chat")
 	public String chat(Model model, Form form) {
-		model.addAttribute("title", "チャット画面");
-//		view
+		model.addAttribute("title", "CHAT");
+
+//		chat.htmlの"dblist"にデータベースの内容を入れる。		
 		List<EntForm> list = sampledao.searchDb();
 		model.addAttribute("dbList", list);
 		
@@ -44,11 +45,14 @@ public class ChatController {
 		
 		
 		if(result.hasErrors()) {
+			model.addAttribute("title", "CHAT");
+			
+//			chat.htmlの"dblist"にデータベースの内容を入れる。		
+			List<EntForm> list = sampledao.searchDb();
+			model.addAttribute("dbList", list);
 			
 			return "form/chat";
 		}
-		
-		model.addAttribute("title", "確認画面");
 		
 		EntForm entform = new EntForm();
 		entform.setName(form.getName());
@@ -61,7 +65,8 @@ public class ChatController {
 	
 
 		
-		return "form/confirm";
+//		return "form/confirm";
+		return "redirect:/chat";
 	}
 	
 }

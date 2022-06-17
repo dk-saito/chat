@@ -1,1 +1,39 @@
 @charset "UTF-8";
+
+* {
+	font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+ 
+}
+
+body {
+	margin: 0 auto;
+	background-color: skyblue;
+}
+
+h1 {
+	text-align: center;
+}
+
+#form {
+	text-align: center;
+}
+
+#talk {
+	margin: 20px auto;
+	border-width: 4px;
+}
+
+#talk tr td:nth-child(even) {
+	background-color: white;
+	border-radius: 16px;
+	padding: 4px 10px;
+}
+
+#talk tr td:nth-child(odd) {
+	padding: 0px 14px;
+}
+
+.errorMessage {
+	color: red;
+}
+

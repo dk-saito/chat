@@ -1,0 +1,1 @@
+INSERT INTO sample (name, comment) VALUES ('taro', 'こんちゃ～こんちゃ～');

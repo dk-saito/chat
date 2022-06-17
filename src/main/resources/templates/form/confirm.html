@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:object="${form}">
+		<p th:text="${form.name}"></p>
+		<p th:text="${form.comment}"></p>
+
+		<form method="get" action="#" th:action="@{/chat}">
+			<input type="hidden" name="name" th:value="${form.name}" />
+			<input type="hidden" name="comment" th:value="${form.comment}" /> 
+			<input type="submit" value="送信" />
+		</form>
+
+		<br />
+
+		<!-- 
+		<form method="get" action="#" th:action="@{/chat}">
+			<input type="submit" value="戻る" />
+		</form>
+		 -->
+	</div>
+
+
+</body>
+</html>
